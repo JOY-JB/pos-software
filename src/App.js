@@ -322,9 +322,11 @@ function App() {
                               return acc + obj.price * obj.quantity;
                             }, 0)
                           ).toFixed(2) -
-                            (isNaN(parseFloat(discount).toFixed(2))
-                              ? 0
-                              : parseFloat(discount).toFixed(2))}
+                            parseFloat(
+                              isNaN(parseFloat(discount).toFixed(2))
+                                ? 0
+                                : parseFloat(discount).toFixed(2)
+                            ).toFixed(2)}
                         </Typography>
                       </Grid>
                     </Grid>
